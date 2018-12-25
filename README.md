@@ -15,6 +15,7 @@
 ├── graph   图论算法
 │   ├── digraph.cpp       有向图
 │   ├── graph.cpp         无向图
+│   ├── minimum_spanning_tree 图的最小生成树算法
 │   └── simple_paths.cpp  简单路径
 ├── sort    排序算法
 │   └── sort.cpp
