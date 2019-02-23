@@ -24,15 +24,18 @@ class SortSets
 	void SelectSort(); //选择排序
 	void HeapSort();   //堆排序
 	void BubbleSort(); //冒泡排序
-	void QuickSort(); //快速排序
+	void QuickSort();  //快速排序
+	void MergeSort();  //归并排序
   private:
 	vector<value_type> usedArray;	  //排序使用的数组
 	vector<value_type> originalArrary; //保存排序以前的乱序数组
 
-	void adjustHeap(int, int); //堆排序构造堆
-	void QuickSortRun(int left,int right);
-	int devision(int,int); //快速排序双指针,找出重合位置
-	inline void printArray()   //打印函数
+	void adjustHeap(int, int);							  //堆排序构造堆
+	void QuickSortRun(int, int);						  //快排递归
+	void MergeSortRun(int, int, vector<value_type> &);	//归并排序递归
+	void MergeArray(int, int, int, vector<value_type> &); //归并数组函数
+	int devision(int, int);								  //快速排序双指针,找出重合位置
+	inline void printArray()							  //打印函数
 	{
 		cout << "results:" << endl;
 		for (auto x : usedArray)
@@ -151,46 +154,84 @@ template <typename T>
 void SortSets<T>::BubbleSort()
 {
 	this->copyTo();
-	for(int i=0;i<usedArray.size()-1;i++)
-		for(int j=0;j<usedArray.size()-i-1;j++)
-			if(usedArray[j]>usedArray[j+1])
-				swap(usedArray[j],usedArray[j+1]);
+	for (int i = 0; i < usedArray.size() - 1; i++)
+		for (int j = 0; j < usedArray.size() - i - 1; j++)
+			if (usedArray[j] > usedArray[j + 1])
+				swap(usedArray[j], usedArray[j + 1]);
 	this->printArray();
 }
 template <typename T>
-int SortSets<T>::devision(int left,int right)
+int SortSets<T>::devision(int left, int right)
 {
 	value_type temp = usedArray[left];
-	while(left<right)
+	while (left < right)
 	{
-		while(left<right && usedArray[right]>=temp)
+		while (left < right && usedArray[right] >= temp)
 			right--;
-		if(left<right)
-			usedArray[left]=usedArray[right];
-		while(left<right && usedArray[left]<=temp)
+		if (left < right)
+			usedArray[left] = usedArray[right];
+		while (left < right && usedArray[left] <= temp)
 			left++;
-		if(left<right)
-			usedArray[right]=usedArray[left];
+		if (left < right)
+			usedArray[right] = usedArray[left];
 	}
-	usedArray[left]=temp;
+	usedArray[left] = temp;
 	return left;
 }
 template <typename T>
 void SortSets<T>::QuickSort()
 {
 	this->copyTo();
-	this->QuickSortRun(0,usedArray.size()-1);
+	this->QuickSortRun(0, usedArray.size() - 1);
 	this->printArray();
 }
 template <typename T>
-void SortSets<T>::QuickSortRun(int left,int right)
+void SortSets<T>::QuickSortRun(int left, int right)
 {
-	if(left<right)
+	if (left < right)
 	{
-		auto base = this->devision(left,right);
-		QuickSortRun(left, base-1);
-		QuickSortRun(base+1, right);
+		auto base = this->devision(left, right);
+		QuickSortRun(left, base - 1);
+		QuickSortRun(base + 1, right);
 	}
+}
+template <typename T>
+void SortSets<T>::MergeArray(int left, int mid, int right, vector<value_type> &temp)
+{
+	int i = left, j = mid + 1, k = 0;
+	while (i <= mid && j <= right)
+	{
+		if (usedArray[i] <= usedArray[j])
+			temp[k++] = usedArray[i++];
+		else
+			temp[k++] = usedArray[j++];
+	}
+	while (i <= mid)
+		temp[k++] = usedArray[i++];
+	while (j <= right)
+		temp[k++] = usedArray[j++];
+	for (int t = 0; t < k; t++)
+		usedArray[left + t] = temp[t];
+}
+template <typename T>
+void SortSets<T>::MergeSortRun(int left, int right, vector<value_type> &temp)
+{
+	if (left < right)
+	{
+		int mid = (left + right) / 2;
+		MergeSortRun(left, mid, temp);
+		MergeSortRun(mid + 1, left, temp);
+		MergeArray(left, mid, right, temp);
+	}
+}
+template <typename T>
+void SortSets<T>::MergeSort()
+{
+	this->copyTo();
+	vector<value_type> temp;
+	temp.resize(usedArray.size());
+	MergeSortRun(0, usedArray.size() - 1, temp);
+	this->printArray();
 }
 int main()
 {
@@ -206,5 +247,7 @@ int main()
 	test.BubbleSort();
 	//快速排序测试
 	test.QuickSort();
+	//归并排序测试
+	test.MergeSort();
 	return 0;
 }
