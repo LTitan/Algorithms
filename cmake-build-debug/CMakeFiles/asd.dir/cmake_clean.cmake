@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/asd.dir/graph/mainTest.cpp.o"
+  "CMakeFiles/asd.dir/graph/minimum_panning_tree.cpp.o"
   "asd.pdb"
   "asd"
 )

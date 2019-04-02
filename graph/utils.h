@@ -32,6 +32,7 @@ private:
 public:
     void init_graph(unsigned int N)
     {
+        this->N=N;
         adjList.resize(N+1);
         adjMatrix = new int* [N+1];
         for(int i=0;i<N+1;i++)
@@ -75,6 +76,7 @@ private:
 public:
     void init_graph(unsigned int N)
     {
+        this->N=N;
         adjList.resize(N+1);
         indegree.resize(N+1, 0);
         adjMatrix = new int* [N+1];

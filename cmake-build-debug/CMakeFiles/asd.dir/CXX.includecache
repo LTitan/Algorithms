@@ -6,13 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/ltitan/mygit/Algorithms/graph/GraphFunction.h
+/Users/ltitan/mygit/Algorithms/graph/minimum_panning_tree.cpp
 utils.h
 /Users/ltitan/mygit/Algorithms/graph/utils.h
-
-/Users/ltitan/mygit/Algorithms/graph/mainTest.cpp
-GraphFunction.h
-/Users/ltitan/mygit/Algorithms/graph/GraphFunction.h
 
 /Users/ltitan/mygit/Algorithms/graph/utils.h
 algorithm

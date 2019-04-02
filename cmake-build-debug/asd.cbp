@@ -80,7 +80,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/ltitan/mygit/Algorithms/graph/mainTest.cpp">
+		<Unit filename="/Users/ltitan/mygit/Algorithms/graph/minimum_panning_tree.cpp">
 			<Option target="asd"/>
 		</Unit>
 		<Unit filename="/Users/ltitan/mygit/Algorithms/CMakeLists.txt">

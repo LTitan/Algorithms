@@ -3,65 +3,48 @@
 	1.prim算法
 	2.kruskal算法
 */
-#include <iostream>
-#include <vector>
-#include <cmath>
-#include <algorithm>
+#include "utils.h"
 using namespace std;
-#define INF 0x3f3fffff //假设为一个最大极限值
-
-
 
 /*
 prim算法
 */
-template<typename Type,int N> 
+template<typename Type>
 //模板类 Type为边的权值类型  N为顶点数
 class Prim
 {
 public:
-	void initilize();//初始化变量 
-	Type prim(); //返回生产的最小生成树的边的权值和
-private:
-	Type cost[N][N];//cost[u][v] 表示边e(u,v)的权值
-	Type mincost[N];//从集合X出发到每个顶点的最小权值
-	bool used[N];//i 是否包含在X里面
-};
+	void initilize(int);//初始化变量
+	//参数一为传入的图的邻接矩阵
+	//返回生产的最小生成树的边的权值和
+	Type prim(Type **cost);
 
-template<typename Type, int N>
-void Prim<Type, N>::initilize()
+	//析构函数
+	~Prim(){delete[] mincost;delete[] used;}
+private:
+	//Type cost[N][N];//cost[u][v] 表示边e(u,v)的权值
+	Type *mincost= nullptr;//从集合X出发到每个顶点的最小权值
+	bool *used= nullptr;//i 是否包含在X里面
+	int N;//节点个数
+};
+template<typename Type>
+void Prim<Type>::initilize(int n)
 {
 	//无向图如图 MST.png 所示
-	/*
-	v	u	e
-	1	3	1
-	2	3	2
-	3	4	3
-	2	5	10
-	3	6	7
-	4	6	1
-	5	6	5
-	4	7	5
-	6	7	8
-	*/
-	//这里在控制台输入比较好的，我用笨点的方式直接赋值了
-	for (int i = 0; i < N; i++)
-		fill(cost[i], cost[i] + N, INF);
-	cost[0][2]=cost[2][0] = 1, cost[1][2]=cost[2][1] = 2, cost[2][3]=cost[3][2] = 3;
-	cost[1][4]=cost[4][1] = 10, cost[2][5]=cost[5][2] = 7, cost[3][5]=cost[5][3] = 1;
-	cost[4][5]=cost[5][4] = 5, cost[3][6]=cost[6][3] = 5, cost[5][6]=cost[6][5] = 8;
-
-
+	//更改传入方式在main函数里面输入图，此类只是单纯的调用算法
+	this->N=n;
+	mincost = new Type[N+1];
+	used = new bool[N+1];
 	//初始化所有的最小值都是无穷大，并且顶点都不在集合内
-	for (int i = 0; i < N; i++)
+	for (int i = 0; i <= N; i++)
 	{
 		mincost[i] = INF;
 		used[i] = false;
 	}
-	mincost[0] = 0;//自身到自身的距离为0
+	mincost[1] = 0;//自身到自身的距离为0
 }
-template<typename Type, int N>
-Type Prim<Type, N>::prim()
+template<typename Type>
+Type Prim<Type>::prim(Type **cost)
 {
 	/*
 	计算最小生成树的权值
@@ -72,7 +55,7 @@ Type Prim<Type, N>::prim()
 	{
 		int v = -1;
 		//从不属于X的顶点中选取到X权值最小的顶点
-		for (int u = 0; u < N; u++)
+		for (int u = 1; u <= N; u++)
 		{
 			if (!used[u] && (v == -1 || mincost[u] < mincost[v]))
 				v = u;
@@ -80,7 +63,7 @@ Type Prim<Type, N>::prim()
 		if (v == -1) break;//证明所有点遍历完毕
 		used[v] = true;
 		res += mincost[v];//权值加起来
-		for (int u = 0; u < N; u++)
+		for (int u = 1; u <= N; u++)
 		{
 			//更新后面的顶点
 			mincost[u] = std::min(mincost[u],cost[v][u]);
@@ -178,14 +161,44 @@ Type Kruskal<Type, N, E>::kruskal()
 
 int main(int argc, char **argv)
 {
-	Prim<int, 7> test_prim;
-	test_prim.initilize();
-	cout<<"prim:"<<test_prim.prim()<<endl;
 
+	/*
+	 //样例输入
+7 9
+1	3	1
+2	3	2
+3	4	3
+2	5	10
+3	6	7
+4	6	1
+5	6	5
+4	7	5
+6	7	8
+	 //输出 17
+	 */
+    int N,E;
+    cin>>N>>E;
+    UnDirectedGraph dg; //创建无向图
+
+    dg.init_graph(N);//无向图的初始化
+    for(int i=0;i<E;i++)
+    {
+        //输入无向图的节点和边权值
+        int s,v,t;
+        cin>>s>>t>>v;
+        dg.addEdege(s,t,v);
+    }
+    dg.AdjListToMatrix();//邻接表转矩阵
+
+	Prim<int> test_prim;
+	test_prim.initilize(N);
+	cout<<"prim:"<<test_prim.prim(dg.getMatrix())<<endl;
+
+
+	//考虑到并不熟悉utils的类，克鲁斯卡尔依然保留了原始的代码
 
 	Kruskal<int, 7, 9> test_krus;
 	test_krus.initialize();
 	cout << "kruskal:" << test_krus.kruskal() << endl;
 
-	system("pause");
 }
