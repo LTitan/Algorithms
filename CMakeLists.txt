@@ -5,7 +5,7 @@ SET(CMAKE_BUILE_TYPE DEBUG) #debug模式
 set(CMAKE_CXX_STANDARD 11) #c++11
 
 
-add_executable(asd sort/sort.cpp graph/utils.h)
+add_executable(asd graph/mainTest.cpp)
 
 # 通用包含目录
 # include_directories("${PROJECT_SOURCE_DIR}")

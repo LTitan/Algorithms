@@ -123,32 +123,32 @@ asd/fast:
 	$(MAKE) -f CMakeFiles/asd.dir/build.make CMakeFiles/asd.dir/build
 .PHONY : asd/fast
 
-sort/sort.o: sort/sort.cpp.o
+graph/mainTest.o: graph/mainTest.cpp.o
 
-.PHONY : sort/sort.o
+.PHONY : graph/mainTest.o
 
 # target to build an object file
-sort/sort.cpp.o:
-	$(MAKE) -f CMakeFiles/asd.dir/build.make CMakeFiles/asd.dir/sort/sort.cpp.o
-.PHONY : sort/sort.cpp.o
+graph/mainTest.cpp.o:
+	$(MAKE) -f CMakeFiles/asd.dir/build.make CMakeFiles/asd.dir/graph/mainTest.cpp.o
+.PHONY : graph/mainTest.cpp.o
 
-sort/sort.i: sort/sort.cpp.i
+graph/mainTest.i: graph/mainTest.cpp.i
 
-.PHONY : sort/sort.i
+.PHONY : graph/mainTest.i
 
 # target to preprocess a source file
-sort/sort.cpp.i:
-	$(MAKE) -f CMakeFiles/asd.dir/build.make CMakeFiles/asd.dir/sort/sort.cpp.i
-.PHONY : sort/sort.cpp.i
+graph/mainTest.cpp.i:
+	$(MAKE) -f CMakeFiles/asd.dir/build.make CMakeFiles/asd.dir/graph/mainTest.cpp.i
+.PHONY : graph/mainTest.cpp.i
 
-sort/sort.s: sort/sort.cpp.s
+graph/mainTest.s: graph/mainTest.cpp.s
 
-.PHONY : sort/sort.s
+.PHONY : graph/mainTest.s
 
 # target to generate assembly for a file
-sort/sort.cpp.s:
-	$(MAKE) -f CMakeFiles/asd.dir/build.make CMakeFiles/asd.dir/sort/sort.cpp.s
-.PHONY : sort/sort.cpp.s
+graph/mainTest.cpp.s:
+	$(MAKE) -f CMakeFiles/asd.dir/build.make CMakeFiles/asd.dir/graph/mainTest.cpp.s
+.PHONY : graph/mainTest.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... asd"
-	@echo "... sort/sort.o"
-	@echo "... sort/sort.i"
-	@echo "... sort/sort.s"
+	@echo "... graph/mainTest.o"
+	@echo "... graph/mainTest.i"
+	@echo "... graph/mainTest.s"
 .PHONY : help
 
 

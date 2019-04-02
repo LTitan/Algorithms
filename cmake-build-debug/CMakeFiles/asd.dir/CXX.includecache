@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ltitan/mygit/Algorithms/graph/GraphFunction.h
+utils.h
+/Users/ltitan/mygit/Algorithms/graph/utils.h
+
+/Users/ltitan/mygit/Algorithms/graph/mainTest.cpp
+GraphFunction.h
+/Users/ltitan/mygit/Algorithms/graph/GraphFunction.h
+
+/Users/ltitan/mygit/Algorithms/graph/utils.h
+algorithm
+-
+cstdio
+-
+iostream
+-
+vector
+-
+stack
+-
+queue
+-
+forward_list
+-
+

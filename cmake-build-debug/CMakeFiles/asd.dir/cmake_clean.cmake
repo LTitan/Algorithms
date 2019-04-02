@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/asd.dir/sort/sort.cpp.o"
+  "CMakeFiles/asd.dir/graph/mainTest.cpp.o"
   "asd.pdb"
   "asd"
 )
