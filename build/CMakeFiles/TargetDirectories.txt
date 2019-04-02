@@ -1,3 +1,0 @@
-D:/git/Algorithms/build/CMakeFiles/asd.dir
-D:/git/Algorithms/build/CMakeFiles/edit_cache.dir
-D:/git/Algorithms/build/CMakeFiles/rebuild_cache.dir

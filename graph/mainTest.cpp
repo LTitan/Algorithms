@@ -3,7 +3,7 @@
 //
 #include "GraphFunction.h"
 /*
-一个无向图的输入
+一个无向图的输入样例
 8 9
 1 2
 1 3
@@ -16,7 +16,7 @@
 6 7
 
 
-一个有向图的输入
+一个有向图的输入样例
 12 16
 1 2
 1 3
@@ -58,7 +58,6 @@ DFS(ug1.getAdjList(),1);
 cout<<"\nBFS:"<<endl;
 init_visited(N);
 BFS(ug1.getAdjList(),1);
-remove_visited();
 */
     Digraph dg1;
 

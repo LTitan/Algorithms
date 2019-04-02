@@ -123,32 +123,32 @@ asd/fast:
 	$(MAKE) -f CMakeFiles/asd.dir/build.make CMakeFiles/asd.dir/build
 .PHONY : asd/fast
 
-graph/minimum_panning_tree.o: graph/minimum_panning_tree.cpp.o
+graph/mainTest.o: graph/mainTest.cpp.o
 
-.PHONY : graph/minimum_panning_tree.o
+.PHONY : graph/mainTest.o
 
 # target to build an object file
-graph/minimum_panning_tree.cpp.o:
-	$(MAKE) -f CMakeFiles/asd.dir/build.make CMakeFiles/asd.dir/graph/minimum_panning_tree.cpp.o
-.PHONY : graph/minimum_panning_tree.cpp.o
+graph/mainTest.cpp.o:
+	$(MAKE) -f CMakeFiles/asd.dir/build.make CMakeFiles/asd.dir/graph/mainTest.cpp.o
+.PHONY : graph/mainTest.cpp.o
 
-graph/minimum_panning_tree.i: graph/minimum_panning_tree.cpp.i
+graph/mainTest.i: graph/mainTest.cpp.i
 
-.PHONY : graph/minimum_panning_tree.i
+.PHONY : graph/mainTest.i
 
 # target to preprocess a source file
-graph/minimum_panning_tree.cpp.i:
-	$(MAKE) -f CMakeFiles/asd.dir/build.make CMakeFiles/asd.dir/graph/minimum_panning_tree.cpp.i
-.PHONY : graph/minimum_panning_tree.cpp.i
+graph/mainTest.cpp.i:
+	$(MAKE) -f CMakeFiles/asd.dir/build.make CMakeFiles/asd.dir/graph/mainTest.cpp.i
+.PHONY : graph/mainTest.cpp.i
 
-graph/minimum_panning_tree.s: graph/minimum_panning_tree.cpp.s
+graph/mainTest.s: graph/mainTest.cpp.s
 
-.PHONY : graph/minimum_panning_tree.s
+.PHONY : graph/mainTest.s
 
 # target to generate assembly for a file
-graph/minimum_panning_tree.cpp.s:
-	$(MAKE) -f CMakeFiles/asd.dir/build.make CMakeFiles/asd.dir/graph/minimum_panning_tree.cpp.s
-.PHONY : graph/minimum_panning_tree.cpp.s
+graph/mainTest.cpp.s:
+	$(MAKE) -f CMakeFiles/asd.dir/build.make CMakeFiles/asd.dir/graph/mainTest.cpp.s
+.PHONY : graph/mainTest.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... asd"
-	@echo "... graph/minimum_panning_tree.o"
-	@echo "... graph/minimum_panning_tree.i"
-	@echo "... graph/minimum_panning_tree.s"
+	@echo "... graph/mainTest.o"
+	@echo "... graph/mainTest.i"
+	@echo "... graph/mainTest.s"
 .PHONY : help
 
 

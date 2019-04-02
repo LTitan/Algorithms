@@ -1,7 +1,0 @@
-[
-{
-  "directory": "D:/git/Algorithms/build",
-  "command": "C:\\Mingw\\mingw64\\bin\\g++.exe    -g   -std=gnu++11 -o CMakeFiles\\asd.dir\\sort\\sort.cpp.obj -c D:\\git\\Algorithms\\sort\\sort.cpp",
-  "file": "D:/git/Algorithms/sort/sort.cpp"
-}
-]

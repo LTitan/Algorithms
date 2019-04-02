@@ -50,7 +50,7 @@ void BFS(vector<vector<Pair>> &G,int v)
         }
     }
 }
-//有向图的拓扑排序
+//有向图的拓扑排序--迭代版
 bool topologicalSort(vector<vector<Pair>> &G, vector<int> &indegree)
 {
     stack<int> S;

@@ -57,27 +57,27 @@ include CMakeFiles/asd.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/asd.dir/flags.make
 
-CMakeFiles/asd.dir/graph/minimum_panning_tree.cpp.o: CMakeFiles/asd.dir/flags.make
-CMakeFiles/asd.dir/graph/minimum_panning_tree.cpp.o: ../graph/minimum_panning_tree.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ltitan/mygit/Algorithms/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/asd.dir/graph/minimum_panning_tree.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/asd.dir/graph/minimum_panning_tree.cpp.o -c /Users/ltitan/mygit/Algorithms/graph/minimum_panning_tree.cpp
+CMakeFiles/asd.dir/graph/mainTest.cpp.o: CMakeFiles/asd.dir/flags.make
+CMakeFiles/asd.dir/graph/mainTest.cpp.o: ../graph/mainTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ltitan/mygit/Algorithms/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/asd.dir/graph/mainTest.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/asd.dir/graph/mainTest.cpp.o -c /Users/ltitan/mygit/Algorithms/graph/mainTest.cpp
 
-CMakeFiles/asd.dir/graph/minimum_panning_tree.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/asd.dir/graph/minimum_panning_tree.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ltitan/mygit/Algorithms/graph/minimum_panning_tree.cpp > CMakeFiles/asd.dir/graph/minimum_panning_tree.cpp.i
+CMakeFiles/asd.dir/graph/mainTest.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/asd.dir/graph/mainTest.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ltitan/mygit/Algorithms/graph/mainTest.cpp > CMakeFiles/asd.dir/graph/mainTest.cpp.i
 
-CMakeFiles/asd.dir/graph/minimum_panning_tree.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/asd.dir/graph/minimum_panning_tree.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ltitan/mygit/Algorithms/graph/minimum_panning_tree.cpp -o CMakeFiles/asd.dir/graph/minimum_panning_tree.cpp.s
+CMakeFiles/asd.dir/graph/mainTest.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/asd.dir/graph/mainTest.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ltitan/mygit/Algorithms/graph/mainTest.cpp -o CMakeFiles/asd.dir/graph/mainTest.cpp.s
 
 # Object files for target asd
 asd_OBJECTS = \
-"CMakeFiles/asd.dir/graph/minimum_panning_tree.cpp.o"
+"CMakeFiles/asd.dir/graph/mainTest.cpp.o"
 
 # External object files for target asd
 asd_EXTERNAL_OBJECTS =
 
-asd: CMakeFiles/asd.dir/graph/minimum_panning_tree.cpp.o
+asd: CMakeFiles/asd.dir/graph/mainTest.cpp.o
 asd: CMakeFiles/asd.dir/build.make
 asd: CMakeFiles/asd.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ltitan/mygit/Algorithms/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable asd"
