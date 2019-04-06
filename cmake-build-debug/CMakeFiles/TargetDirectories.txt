@@ -1,3 +1,3 @@
-/Users/ltitan/mygit/Algorithms/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/ltitan/mygit/Algorithms/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/ltitan/mygit/Algorithms/cmake-build-debug/CMakeFiles/asd.dir
+C:/Users/Administrator/Desktop/Algorithms/cmake-build-debug/CMakeFiles/asd.dir
+C:/Users/Administrator/Desktop/Algorithms/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Administrator/Desktop/Algorithms/cmake-build-debug/CMakeFiles/rebuild_cache.dir

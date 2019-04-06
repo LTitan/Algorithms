@@ -6,11 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/Users/ltitan/mygit/Algorithms/graph/minimum_panning_tree.cpp
+C:/Users/Administrator/Desktop/Algorithms/graph/GraphFunction.h
 utils.h
-/Users/ltitan/mygit/Algorithms/graph/utils.h
+C:/Users/Administrator/Desktop/Algorithms/graph/utils.h
 
-/Users/ltitan/mygit/Algorithms/graph/utils.h
+C:/Users/Administrator/Desktop/Algorithms/graph/mainTest.cpp
+GraphFunction.h
+C:/Users/Administrator/Desktop/Algorithms/graph/GraphFunction.h
+
+C:/Users/Administrator/Desktop/Algorithms/graph/utils.h
 algorithm
 -
 cstdio

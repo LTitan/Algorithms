@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/ltitan/mygit/Algorithms/graph/mainTest.cpp" "/Users/ltitan/mygit/Algorithms/cmake-build-debug/CMakeFiles/asd.dir/graph/mainTest.cpp.o"
+  "C:/Users/Administrator/Desktop/Algorithms/graph/mainTest.cpp" "C:/Users/Administrator/Desktop/Algorithms/cmake-build-debug/CMakeFiles/asd.dir/graph/mainTest.cpp.obj"
   )
-set(CMAKE_CXX_COMPILER_ID "AppleClang")
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH

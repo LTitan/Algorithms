@@ -10,7 +10,8 @@
 /*
  * 图的BFS和DFS遍历
  * 有向图的拓扑排序
- * 图的最短路径算法
+ * 图的最短路径算法 ：
+ *      --  dijkstra（邻接链表版 邻接矩阵版）
  */
 
 bool *visited=nullptr;
@@ -34,7 +35,6 @@ void DFS(vector<vector<Pair>> &G,int v)//传入邻接链表
             DFS(G, x.first);
     }
 }
-
 
 //广度优先遍历
 void BFS(vector<vector<Pair>> &G,int v)
@@ -84,6 +84,23 @@ bool topologicalSort(vector<vector<Pair>> &G, vector<int> &indegree)
     return true;
 }
 
+/*
+ //迪杰特斯拉的测试无向图例子
+ //输入
+7 9
+1	3	1
+2	3	2
+3	4	3
+2	5	10
+3	6	7
+4	6	1
+5	6	5
+4	7	5
+6	7	8
+//输出dis[节点下标]
+ */
+
+// 迪杰斯特拉的邻接链表算法  时间复杂度O(N+E)
 void dijkstra(int start, vector<vector<Pair>> &G, vector<int> &dis) {
     /*
      * start  start表示出发的位置
@@ -109,6 +126,36 @@ void dijkstra(int start, vector<vector<Pair>> &G, vector<int> &dis) {
                 dis[e.first] = dis[v] + e.second;
                 que.push(P(dis[e.first], e.first));
             }
+        }
+    }
+}
+// 迪杰斯特拉的邻接矩阵算法 时间复杂度O(N^2)
+void dijkstra(int start, int **cost,int N, vector<int> &dis)
+{
+    /*
+     *  start 表示起始位置
+     *  cost 为图的邻接矩阵
+     *  N 为顶点数
+     *  dis 返回为s到各点的最短距离
+     */
+    dis.resize(N+1,INF); //调整大小
+    vector<bool> used(N+1,false);//已经使用的顶点
+    dis[start] = 0;
+    while(true)
+    {
+        int v=-1;
+        for(int u=1;u<=N;u++)
+        {
+            //先找到一个没有使用的点或者距离小于原来的点
+            if(!used[u]&&(v==-1||dis[u]<dis[v]))
+                v=u;
+        }
+        if(v==-1) break;
+        used[v]=true;
+        //依次更新节点
+        for(int u=1;u<=N;u++)
+        {
+            dis[u]=std::min(dis[u],dis[v]+cost[v][u]);
         }
     }
 }

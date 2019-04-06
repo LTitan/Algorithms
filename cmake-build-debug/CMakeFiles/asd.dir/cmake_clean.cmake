@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/asd.dir/graph/mainTest.cpp.o"
+  "CMakeFiles/asd.dir/graph/mainTest.cpp.obj"
   "asd.pdb"
-  "asd"
+  "asd.exe"
+  "asd.exe.manifest"
+  "libasd.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

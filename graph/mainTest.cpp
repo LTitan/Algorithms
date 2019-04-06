@@ -59,18 +59,31 @@ cout<<"\nBFS:"<<endl;
 init_visited(N);
 BFS(ug1.getAdjList(),1);
 */
-    Digraph dg1;
+    UnDirectedGraph dg1;
 
     int N,E;
     cin>>N>>E;
     dg1.init_graph(N);
     for(int i=0;i<E;i++)
     {
-        int s,t;
-        cin>>s>>t;
-        dg1.addEdege(s,t);
+        int s,t,v;
+        cin>>s>>t>>v;
+        dg1.addEdege(s,t,v);
     }
-    topologicalSort(dg1.getAdjList(),dg1.getIndegree());
+    //topologicalSort(dg1.getAdjList(),dg1.getIndegree()); //拓扑排序测试
+    vector<int> dis;
+    dg1.AdjListToMatrix();
+    dijkstra(1,dg1.getMatrix(),N,dis);
 
+    for(auto x:dis)
+    {
+        cout<<x<<endl;
+    }
+
+    dijkstra(1,dg1.getAdjList(),dis);
+    for(auto x:dis)
+    {
+        cout<<x<<endl;
+    }
 
 }
