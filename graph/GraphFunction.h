@@ -138,6 +138,8 @@ void dijkstra(int start, int **cost,int N, vector<int> &dis)
      *  N 为顶点数
      *  dis 返回为s到各点的最短距离
      */
+    if(!cost) return;
+
     dis.resize(N+1,INF); //调整大小
     vector<bool> used(N+1,false);//已经使用的顶点
     dis[start] = 0;
