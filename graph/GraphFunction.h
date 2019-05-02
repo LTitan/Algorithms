@@ -78,7 +78,7 @@ bool topologicalSort(vector<vector<Pair>> &G, vector<int> &indegree)
     }
     if(c<indegree.size()-1)
     {
-        cerr<<"图有环"<<endl;
+		cout << "图有环\n";
         return false;
     }
     return true;

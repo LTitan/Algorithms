@@ -1,3 +1,0 @@
-"C:\Program Files\JetBrains\CLion 2019.1\bin\cmake\win\bin\cmake.exe" -E remove -f CMakeFiles\asd.dir/objects.a
-C:\MingW\mingw64\bin\ar.exe cr CMakeFiles\asd.dir/objects.a @CMakeFiles\asd.dir\objects1.rsp
-C:\MingW\mingw64\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\asd.dir/objects.a -Wl,--no-whole-archive  -o asd.exe -Wl,--out-implib,libasd.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\asd.dir\linklibs.rsp

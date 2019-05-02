@@ -86,4 +86,5 @@ BFS(ug1.getAdjList(),1);
         cout<<x<<endl;
     }
 
+	system("pause");//if your OS is windows
 }
