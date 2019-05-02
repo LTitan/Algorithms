@@ -37,10 +37,10 @@ include rules.ninja
 # Order-only phony target for asd
 
 build cmake_object_order_depends_target_asd: phony || CMakeFiles\asd.dir
-build CMakeFiles\asd.dir\graph\mainTest.cpp.obj: CXX_COMPILER__asd ..\..\graph\mainTest.cpp || cmake_object_order_depends_target_asd
+build CMakeFiles\asd.dir\string\sequences.cpp.obj: CXX_COMPILER__asd ..\..\string\sequences.cpp || cmake_object_order_depends_target_asd
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /Zi /O2 /Ob1 /DNDEBUG
   OBJECT_DIR = CMakeFiles\asd.dir
-  OBJECT_FILE_DIR = CMakeFiles\asd.dir\graph
+  OBJECT_FILE_DIR = CMakeFiles\asd.dir\string
   TARGET_COMPILE_PDB = CMakeFiles\asd.dir\
   TARGET_PDB = asd.pdb
 
@@ -51,7 +51,7 @@ build CMakeFiles\asd.dir\graph\mainTest.cpp.obj: CXX_COMPILER__asd ..\..\graph\m
 #############################################
 # Link the executable asd.exe
 
-build asd.exe: CXX_EXECUTABLE_LINKER__asd CMakeFiles\asd.dir\graph\mainTest.cpp.obj
+build asd.exe: CXX_EXECUTABLE_LINKER__asd CMakeFiles\asd.dir\string\sequences.cpp.obj
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /Zi /O2 /Ob1 /DNDEBUG
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
