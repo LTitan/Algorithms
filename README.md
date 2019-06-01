@@ -26,7 +26,7 @@
     ├── strings.cpp        简单字符串处理
     ├── expressions.cpp    表达式求值
     ├── matching.cpp       字符串匹配
-    └── sequences.cpp      序列
+    └── sequences.cpp      最长公共子序列、最长公共子串
 ```
 
 目前部分代码存在注释不全的问题（主要是图论和树算法），也有大量经典算法没有补充进来。欢迎提 issue和 pull request。

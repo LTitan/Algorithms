@@ -25,7 +25,7 @@ int max_subsequence_dp(string str1, string str2)
 	}
 	return dp[n][m];
 }
-//
+//本次改成了vector比较方便，看不懂的话理解为数组即可
 int maxSubstring(string str1,string str2)
 {
 	const int n =str1.length(), m = str2.length();
