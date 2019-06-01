@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/Users/ltitan/Desktop/Algorithms/bin",
+  "command": "/usr/bin/clang++    -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk   -std=gnu++11 -o CMakeFiles/asd.dir/string/sequences.cpp.o -c /Users/ltitan/Desktop/Algorithms/string/sequences.cpp",
+  "file": "/Users/ltitan/Desktop/Algorithms/string/sequences.cpp"
+}
+]
